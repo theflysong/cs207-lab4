@@ -4,18 +4,35 @@ id = "lab4"
 [directories]
 constraints = ["src/constraints/"]
 sources = ["sim/", "src/modules/"]
-vvp = "build/sim"
-vcd = "build/sim"
+vvp = "build/vvp/"
+vcd = "build/vcd/"
+synthesis = "build/synth/"
+implementation = "build/impl/"
+bitstream = "build/bits/"
 
-[[fpga]]
-id = "ego1"
-part = "xc7a35tcsg324-1"
+[[simulation]]
+id = "bin2bcd"
+top-symbol = "tb_Bin2Bcd"
+timescale = "1ns/1ps"
+vvp = "bin2bcd.vvp"
+vcd = "bin2bcd.vcd"
 
-[[program]]
-id = "lab4proj"
-fpga = "ego1"
-top-symbol = "main"
-synthesis = "lab4proj.json"
-implementation = "lab4proj.fasm"
-bitstream = "lab4proj.bit"
-constraints = "xilinx.xdc"
+[[simulation]]
+id = "bcd2seg7"
+top-symbol = "tb_Bcd2Seg7"
+timescale = "1ns/1ps"
+vvp = "bcd2seg7.vvp"
+vcd = "bcd2seg7.vcd"
+
+# [[fpga]]
+# id = "ego1"
+# part = "xc7a35tcsg324-1"
+
+# [[program]]
+# id = "lab4proj"
+# fpga = "ego1"
+# top-symbol = "main"
+# synthesis = "lab4proj.json"
+# implementation = "lab4proj.fasm"
+# bitstream = "lab4proj.bit"
+# constraints = "xilinx.xdc"
