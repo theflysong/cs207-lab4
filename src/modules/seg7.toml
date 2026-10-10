@@ -1,0 +1,5 @@
+[[module.export]]
+name = "Driver7Seg"
+
+[[module.import]]
+name = "ScanCounter"

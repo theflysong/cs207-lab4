@@ -1,0 +1,21 @@
+name = "Lab4 Project"
+id = "lab4"
+
+[directories]
+constraints = ["src/constraints/"]
+sources = ["sim/", "src/modules/"]
+vvp = "build/sim"
+vcd = "build/sim"
+
+[[fpga]]
+id = "ego1"
+part = "xc7a35tcsg324-1"
+
+[[program]]
+id = "lab4proj"
+fpga = "ego1"
+top-symbol = "main"
+synthesis = "lab4proj.json"
+implementation = "lab4proj.fasm"
+bitstream = "lab4proj.bit"
+constraints = "xilinx.xdc"

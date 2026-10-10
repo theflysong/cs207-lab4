@@ -1,0 +1,3 @@
+[submodule "FPGA-Buildsys"]
+	path = FPGA-Buildsys
+	url = git@github.com:theflysong/FPGA-Buildsys.git

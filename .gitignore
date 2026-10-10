@@ -1,0 +1,8 @@
+build/
+.vscode/
+.fpga-toolchain/
+.venv/
+__pycache__/
+jobs.sh
+buildsys
+buildsys.sh
