@@ -32,23 +32,23 @@ module Driver7Seg #(
         __cs  = 8'b0;
         case (inner_cnt)
             2'd0: begin
-                __ss0 = seg_sels[7:0];
-                __ss1 = seg_sels[39:32];
+                __ss0 = seg_sels[39:32];
+                __ss1 = seg_sels[7:0];
                 __cs  = 8'b00010001;
             end
             2'd1: begin
-                __ss0 = seg_sels[15:8];
-                __ss1 = seg_sels[47:40];
+                __ss0 = seg_sels[47:40];
+                __ss1 = seg_sels[15:8];
                 __cs  = 8'b00100010;
             end
             2'd2: begin
-                __ss0 = seg_sels[23:16];
-                __ss1 = seg_sels[55:48];
+                __ss0 = seg_sels[55:48];
+                __ss1 = seg_sels[23:16];
                 __cs  = 8'b01000100;
             end
             default: begin
-                __ss0 = seg_sels[31:24];
-                __ss1 = seg_sels[63:56];
+                __ss0 = seg_sels[63:56];
+                __ss1 = seg_sels[31:24];
                 __cs  = 8'b10001000;
             end
         endcase

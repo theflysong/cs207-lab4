@@ -70,14 +70,14 @@ set_property IOSTANDARD LVCMOS33 [get_ports {seg7_ss1[7]}]
 
 # 片选 BIT1~BIT8([leftmost] seg7_cs[7]=BIT8, seg7_cs[0]=BIT1 [rightmost])
 
-set_property PACKAGE_PIN G2 [get_ports {seg7_cs[0]}]
-set_property PACKAGE_PIN C2 [get_ports {seg7_cs[1]}]
-set_property PACKAGE_PIN C1 [get_ports {seg7_cs[2]}]
-set_property PACKAGE_PIN H1 [get_ports {seg7_cs[3]}]
-set_property PACKAGE_PIN G1 [get_ports {seg7_cs[4]}]
-set_property PACKAGE_PIN F1 [get_ports {seg7_cs[5]}]
-set_property PACKAGE_PIN E1 [get_ports {seg7_cs[6]}]
-set_property PACKAGE_PIN G6 [get_ports {seg7_cs[7]}]
+set_property PACKAGE_PIN G2 [get_ports {seg7_cs[7]}]
+set_property PACKAGE_PIN C2 [get_ports {seg7_cs[6]}]
+set_property PACKAGE_PIN C1 [get_ports {seg7_cs[5]}]
+set_property PACKAGE_PIN H1 [get_ports {seg7_cs[4]}]
+set_property PACKAGE_PIN G1 [get_ports {seg7_cs[3]}]
+set_property PACKAGE_PIN F1 [get_ports {seg7_cs[2]}]
+set_property PACKAGE_PIN E1 [get_ports {seg7_cs[1]}]
+set_property PACKAGE_PIN G6 [get_ports {seg7_cs[0]}]
 
 set_property IOSTANDARD LVCMOS33 [get_ports {seg7_cs[0]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {seg7_cs[1]}]

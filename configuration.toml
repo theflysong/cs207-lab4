@@ -24,15 +24,15 @@ timescale = "1ns/1ps"
 vvp = "bcd2seg7.vvp"
 vcd = "bcd2seg7.vcd"
 
-# [[fpga]]
-# id = "ego1"
-# part = "xc7a35tcsg324-1"
+[[fpga]]
+id = "ego1"
+part = "xc7a35tcsg324-1"
 
-# [[program]]
-# id = "lab4proj"
-# fpga = "ego1"
-# top-symbol = "main"
-# synthesis = "lab4proj.json"
-# implementation = "lab4proj.fasm"
-# bitstream = "lab4proj.bit"
-# constraints = "xilinx.xdc"
+[[program]]
+id = "lab4proj"
+fpga = "ego1"
+top-symbol = "main"
+synthesis = "lab4proj.json"
+implementation = "lab4proj.fasm"
+bitstream = "lab4proj.bit"
+constraints = "xilinx.xdc"
