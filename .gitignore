@@ -6,3 +6,6 @@ __pycache__/
 jobs.sh
 buildsys
 buildsys.sh
+buildsys.bat
+vivado.jou
+vivado.log
