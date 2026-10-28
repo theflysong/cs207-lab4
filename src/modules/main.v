@@ -40,6 +40,6 @@ module main (
         .seg_sels(__seg_sels),
         .seg7_ss0(seg7_ss0),
         .seg7_ss1(seg7_ss1),
-        .seg7_cs(seg7_cs),
+        .seg7_cs(seg7_cs)
     );
 endmodule
