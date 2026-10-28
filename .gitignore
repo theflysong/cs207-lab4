@@ -1,6 +1,7 @@
 build/
 .vscode/
 .fpga-toolchain/
+.buildsys/
 .venv/
 __pycache__/
 jobs.sh
