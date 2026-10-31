@@ -1,4 +1,4 @@
-module ScanCounter #(
+module step_sequencer #(
     // 每个状态持续多少个时钟周期
     parameter integer CYCLES_PER_STEP = 25000,
     // 状态数(这里 4 个状态覆盖 8 个数码管)

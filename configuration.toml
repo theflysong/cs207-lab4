@@ -1,19 +1,24 @@
-name = "Lab4 Project"
-id = "lab4"
+name = "Lab6 Project"
+id = "lab6"
 
 [directories]
 constraints = ["src/constraints/"]
 simulation  = ["sim/"]
-sources     = ["src/modules/"]
+sources     = ["src/modules/", "src/lib/"]
 
 [[simulation]]
 id = "bin2bcd"
-top-symbol = "tb_Bin2Bcd"
+top-symbol = "tb_bin2bcd"
 timescale = "1ns/1ps"
 
 [[simulation]]
 id = "bcd2seg7"
-top-symbol = "tb_Bcd2Seg7"
+top-symbol = "tb_bcd2seg7"
+timescale = "1ns/1ps"
+
+[[simulation]]
+id = "main_tb"
+top-symbol = "tb_main"
 timescale = "1ns/1ps"
 
 [[fpga]]
@@ -21,7 +26,7 @@ id = "ego1"
 part = "xc7a35tcsg324-1"
 
 [[project]]
-id = "lab4proj"
+id = "lab6proj"
 fpga = "ego1"
 top-symbol = "main"
 constraints = "xilinx.xdc"

@@ -1,5 +1,6 @@
-module Driver7Seg #(
-    parameter integer SEG7CLK_CYCLES = 25000
+module driver_7seg #(
+    parameter integer CLK_FREQ = 100_000_000,
+    parameter integer SEG7_SCAN_FREQ = 4000
 ) (
     input  wire        clk,
     input  wire [63:0] seg_sels,
@@ -8,14 +9,16 @@ module Driver7Seg #(
     // 片选信号, 高电平有效
     output wire [7:0]  seg7_cs
 );
+    localparam integer SEG7CLK_CYCLES = CLK_FREQ / SEG7_SCAN_FREQ;
+
     // 实例化化扫描计数器, 4 个状态, 每状态 SEG7CLK_CYCLES 个时钟
     wire [1:0] inner_cnt;
 
-    ScanCounter #(
+    step_sequencer #(
         .CYCLES_PER_STEP (SEG7CLK_CYCLES),
         .STEP_COUNT      (4),
         .CNT_WIDTH       (2)
-    ) u_scan (
+    ) u_seq (
         .clk   (clk),
         .rst_n (1'b1),      // 无复位信号, 直接接 1
         .step  (inner_cnt)

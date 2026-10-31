@@ -87,3 +87,22 @@ set_property IOSTANDARD LVCMOS33 [get_ports {seg7_cs[4]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {seg7_cs[5]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {seg7_cs[6]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {seg7_cs[7]}]
+
+# rst_n
+
+set_property PACKAGE_PIN P15 [get_ports {rst_n}]
+set_property IOSTANDARD LVCMOS33 [get_ports {rst_n}]
+
+# S0~S4 -> btn[0]~btn[4]
+
+set_property PACKAGE_PIN R11 [get_ports {btn[0]}]
+set_property PACKAGE_PIN R17 [get_ports {btn[1]}]
+set_property PACKAGE_PIN R15 [get_ports {btn[2]}]
+set_property PACKAGE_PIN V1 [get_ports {btn[3]}]
+set_property PACKAGE_PIN J4 [get_ports {btn[4]}]
+
+set_property IOSTANDARD LVCMOS33 [get_ports {btn[0]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {btn[1]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {btn[2]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {btn[3]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {btn[4]}]
