@@ -74,9 +74,12 @@ module pulse_debounce#(
     output wire deb_negedge
 );
     localparam integer DEBOUNCE_CYCLES = (DEBOUNCE_TIME / 1_000) * (CLK_FREQ / 1_000) / 1_000;
+    // 用 $clog2 自动推导计数器位宽，避免固定 32 位浪费资源
+    localparam integer CNT_WIDTH       = $clog2(DEBOUNCE_CYCLES + 1);
 
     //--- 电平型消抖 ---
-    reg [31:0] cnt;
+    reg [CNT_WIDTH-1:0] cnt;
+    //--- 电平型消抖 ---
     always @(posedge clk or negedge rst_n) begin
         if (!rst_n) begin
             cnt       <= 31'd0;
